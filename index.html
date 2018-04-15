@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP SOURCE -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Jura|Rajdhani|Roboto+Mono" rel="stylesheet">
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+     <!-- jquery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <h2 class="title">Trivia Time</h2>
+    </div>
+
+    <div class="container">
+
+        <div class="box">
+            <div class="box-header"><h3>Choose your difficulty</h3></div>
+            <div class="box-body">
+                <div class="difficulty" id="easyDif" value="easy"><p>Easy</p></div>
+                <div class="difficulty" id="mediumDif" value="medium"><p>Medium</p></div>
+                <div class="difficulty" id="hardDif" value="hard"><p>Hard</p></div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header"><h3>Pick a category</h3></div>
+            <div class="box-body">
+                <div class="category" value=''><p>All Categories</p></div>
+                <div class="category" value='9'><p>General Knowledge</p></div>
+                <div class="category" value='18'><p>Computer Science</p></div>
+                <div class="category" value='14'><p>Television</p></div>
+                <div class="category" value='21'><p>Sports</p></div>
+                <div class="category" value='22'><p>Geography</p></div>
+            </div>
+        </div>
+
+        <button id="gameStart">Start Game!</button>
+
+    </div>
+
+<!-- Local js -->
+<script src='./assets/javascript/app.js'></script>
+    
+</body>
+</html>

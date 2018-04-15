@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #ff653b, #ff4612);
+    width: 100vw;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+/* BEGIN STYLING HEADER */
+/* =============================================================== */
+.header {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    background: url(../images/binding_dark.png);
+}
+
+.header::after {
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: top right;
+    transform: skewY(-2deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.title {
+    color: #f5f2dc;
+    font-family: 'Gugi', cursive;
+    font-size: 4em;
+    text-shadow: 6px 6px 8px #000;
+    margin-left: 80px;
+}
+/* END STYLING HEADER */
+/* =============================================================== */
+
+/* BEGIN STYLING DIFFICULTY/CATEGORY */
+/* =============================================================== */
+.container {
+    width: 70%;
+    min-height: 500px;
+    height: fit-content;
+    margin: 80px auto;
+    /* text-align: center; */
+}
+
+.box {
+    width: 39%;
+    height: 403px;
+    margin: 10px 5%;
+    display: inline-block;
+    font-family: 'Jura', cursive;
+    text-align: center;
+    font-size: 1.6em;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid;
+    box-shadow: 7px 10px 14px #111;
+}
+
+.box-header {
+    height: 70px;
+    width: 100%;
+    padding-top: 10px;
+    line-height: 1.8;
+    background-color: #f5f2dc;
+    color: #222;
+    border-radius: 25px 25px 0 0;
+    text-shadow: 2px 2px 4px #111;
+    border-bottom: 2px solid;
+}
+
+.box-body {
+    height: 330px;
+    width: 100%;
+}
+
+/* Styling difficulty selection */
+.difficulty {
+    width: 100%;
+    height: 32.5%;
+    background: #009494;
+    border-bottom: 1px solid;
+    font-size: 1.4em;
+    line-height: 2.7;
+    cursor: pointer;
+}
+
+.difficulty:hover > p {
+    transform: translate(-2px, -6px);
+    text-shadow: 4px 8px 4px #222;
+    transition: .2s;
+}
+
+.difficulty:hover {
+    background: #00acac;
+}
+
+.difficulty:active {
+    background: #00acac;
+}
+
+.difficulty:active > p {
+    transform: translate(2px, 6px);
+    text-shadow: none;
+    transition: .2s;
+}
+
+/* Removing bottom border on last element of difficulty */
+#hardDif {
+    border-bottom: none;
+}
+
+.category {
+    width: 100%;
+    height: 16%;
+    margin: 0;
+    background: #009494;
+    border-bottom: 1px solid;
+    font-size: 1em;
+    line-height: 1.9;
+    cursor: pointer;
+}
+
+.category:hover {
+    background: #00acac;
+}
+
+.category:active {
+    background: #007474;
+}
+
+.category:hover > p {
+    transform: translate(-3px, -3px);
+    text-shadow: 3px 3px 4px #222;
+    transition: .2s;
+}
+
+.category:active > p {
+    transform: translate(3px, 3px);
+    text-shadow: none;
+    transition: .2s;
+}
+/* END STYLING DIFFICULTY/CATEGORY */
+/* =============================================================== */
+
+#gameStart {
+    height: 100px;
+    width: 200px;
+    font-family: 'Gugi', cursive;
+    background: #333;
+    color: #f5f2dc;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.8em;
+    box-shadow: 4px 4px 5px #000;
+    text-shadow: 4px 4px 5px #000;
+    margin: 20px 435px;
+    cursor: pointer;
+    outline: none;
+}
+
+#gameStart:hover {
+    transform: translate(-3px, -3px);
+    background: #444;
+    box-shadow: 7px 7px 8px #000;
+    transition: .2s;
+}
+
+#gameStart:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+/* BEGIN STYLING GAME COUNTDOWN */
+/* =============================================================== */
+.countDown {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/gameCountDown.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* END STYLING GAME COUNTDOWN */
+/* =============================================================== */
+
+/* BEGIN STYLING MAIN GAME SCREEN */
+/* =============================================================== */
+.question {
+    width: 700px;
+    height: 500px;
+    background-color: #f5f2dc;
+    border-radius: 25px;
+    display: inline-block;
+}
+.currentQuestion {
+    height: 150px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    line-height: 2;
+}
+
+.boxSmall {
+    height: 150px;
+    width: 300px;
+    background: #009494;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 10px 23px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 3px 3px 4px #222;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    overflow: hidden;
+}
+
+.boxSmall:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 8px #222;
+    transition: .2s;
+}
+
+
+.boxSmall:focus {
+    background-color: #00acac;
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 2px #222;
+}
+
+#option {
+    padding: 20px;
+    padding-top: 35px;
+}
+
+.stats {
+    width: 355px;
+    height: 500px;
+    margin-left: 16px;
+    border-radius: 25px;
+    float: right;
+}
+
+.time {
+    height: 150px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 25px 25px 0 0;
+    font-family: 'Roboto Mono', sans-serif;
+    color: #f5f2dc;
+    font-size: 4em;
+    line-height: 2;
+}
+
+.gameTimer {
+    padding-left: 75px;
+}
+
+.wins {
+    height: 200px;
+    width: 100%;
+    background-color: #009494;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 7px 7px 3px #222 inset;
+    text-align: center;
+}
+
+#correct, #lives {
+    font-family: 'Orbitron', sans-serif;
+    color: #f5f2dc;
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+#correct {
+    padding-top: 40px;
+}
+
+#submit {
+    height: 110px;
+    width: 80%;
+    margin: 20px 30px;
+    border-radius: 15px;
+    border: none;
+    background: url(../images/binding_dark.png);
+    font-family: 'Gugi', cursive;
+    color: #f5f2dc;
+    text-shadow: 3px 3px 3px #222;
+    font-size: 3em;
+    cursor: pointer;
+    outline: none;
+    transition: .1s;
+}
+
+#submit:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 3px #222;
+}
+
+#submit:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+/* END STYLING MAIN GAME SCREEN */
+/* =============================================================== */
